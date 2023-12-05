@@ -1,12 +1,18 @@
 AnalysisType: rule
 Filename: slack_intune_mdm_disabled.py
-RuleID: Slack.AuditLogs.IntuneMDMDisabled
-DisplayName: Slack Intune MDM Disabled
+RuleID: "Slack.AuditLogs.IntuneMDMDisabled"
+DisplayName: "Slack Intune MDM Disabled"
 Enabled: true
 LogTypes:
   - Slack.AuditLogs
 Tags:
   - Slack
+  - Defense Evasion
+  - Impair Defenses
+  - Disable or Modify Tools
+Reports:
+  MITRE ATT&CK:
+    - TA0005:T1562.001
 Severity: Critical
 Description: Detects the disabling of Microsoft Intune Enterprise MDM within Slack
 Reference: https://api.slack.com/admins/audit-logs

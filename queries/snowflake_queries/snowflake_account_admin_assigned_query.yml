@@ -1,5 +1,5 @@
 AnalysisType: scheduled_query
-QueryName: Query.Snowflake.AccountAdminGranted
+QueryName: "Query.Snowflake.AccountAdminGranted"
 Enabled: false
 Description: >
   Monitor and detect granting account admin role.
@@ -25,5 +25,5 @@ SnowflakeQuery: >
     AND deleted_on is NULL
     AND DATEDIFF(HOUR, created_on, CURRENT_TIMESTAMP) < 24
 Schedule:
-  RateMinutes: 60
-  TimeoutMinutes: 1
+  RateMinutes: 1440
+  TimeoutMinutes: 3

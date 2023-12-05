@@ -1,6 +1,6 @@
 AnalysisType: rule
 Description: An access attempt violating VPC service controls (such as Perimeter controls) has been made.
-DisplayName: GCP Access Attempts Violating VPC Service Controls
+DisplayName: "GCP Access Attempts Violating VPC Service Controls"
 Enabled: true
 Filename: gcp_access_attempts_violating_vpc_service_controls.py
 Severity: Medium
@@ -123,6 +123,8 @@ Tests:
                       violations:
                         - description: gBc-wuGVCapNMnTUePoHos_VyJmr3CsMKlr48kVa4b6XpsT_OWKRng
                           type: VPC_SERVICE_CONTROLS
+                        - description: gCc-wuJa334DJ9940ssdiw_V8400skgjj3912500sldgjzh_LGJANr
+                          type: OTHER_CONTROL_VIOLATION
                 message: 'Request is prohibited by organization''s policy. vpcServiceControlsUniqueIdentifier: gBc-wuGVCapNMnTUePoHos_VyJmr3CsMKlr48kVa4b6XpsT_OWKRng'
         receiveTimestamp: "2023-03-09T16:28:42.567340480Z"
         resource:
@@ -137,5 +139,5 @@ Tests:
 DedupPeriodMinutes: 60
 LogTypes:
     - GCP.AuditLog
-RuleID: GCP.Access.Attempts.Violating.VPC.Service.Controls
+RuleID: "GCP.Access.Attempts.Violating.VPC.Service.Controls"
 Threshold: 1

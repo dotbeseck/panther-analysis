@@ -1,12 +1,18 @@
 AnalysisType: rule
 Filename: slack_legal_hold_policy_modified.py
-RuleID: Slack.AuditLogs.LegalHoldPolicyModified
-DisplayName: Slack Legal Hold Policy Modified
+RuleID: "Slack.AuditLogs.LegalHoldPolicyModified"
+DisplayName: "Slack Legal Hold Policy Modified"
 Enabled: true
 LogTypes:
   - Slack.AuditLogs
 Tags:
   - Slack
+  - Defense Evasion
+  - Impair Defenses
+  - Disable or Modify Tools
+Reports:
+  MITRE ATT&CK:
+    - TA0005:T1562.001
 Severity: High
 Description: Detects changes to configured legal hold policies
 Reference: https://api.slack.com/admins/audit-logs
