@@ -1,12 +1,19 @@
 AnalysisType: rule
 Filename: slack_idp_configuration_change.py
-RuleID: Slack.AuditLogs.IDPConfigurationChanged
-DisplayName: Slack IDP Configuration Changed
+RuleID: "Slack.AuditLogs.IDPConfigurationChanged"
+DisplayName: "Slack IDP Configuration Changed"
 Enabled: true
 LogTypes:
   - Slack.AuditLogs
 Tags:
   - Slack
+  - Persistence
+  - Credential Access
+  - Modify Authentication Process
+Reports:
+  MITRE ATT&CK:
+    - TA0003:T1556
+    - TA0006:T1556
 Severity: High
 Description: Detects changes to the identity provider (IdP) configuration for Slack organizations.
 Reference: https://api.slack.com/admins/audit-logs

@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: gsuite_drive_overly_visible.py
-RuleID: GSuite.DriveOverlyVisible
-DisplayName: GSuite Overly Visible Drive Document
+RuleID: "GSuite.DriveOverlyVisible"
+DisplayName: "GSuite Overly Visible Drive Document"
 Enabled: true
 LogTypes:
   - GSuite.Reports
@@ -58,6 +58,31 @@ Tests:
       {
         'p_row_id': '111222',
         'actor': {'email': 'bobert@example.com'},
+        'id': {'applicationName': 'drive'},
+        'events': [
+          {
+            'type': 'access',
+            'name': 'edit',
+            'parameters': [
+                {
+                  'name': 'visibility', 
+                  'value': 'people_with_link'
+                },
+                {
+                  'name':'doc_title', 
+                  'value':'my shared document'
+                }
+              ]
+          }
+        ]
+      }
+  -
+    Name: Overly Visible Doc Modified - no email
+    ExpectedResult: true
+    Log:
+      {
+        'p_row_id': '111222',
+        'actor': {'profileId': '1234567890123'},
         'id': {'applicationName': 'drive'},
         'events': [
           {

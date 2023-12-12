@@ -1,6 +1,6 @@
 AnalysisType: pack
 PackID: PantherManaged.UniversalDetections
-DisplayName: Panther Universal Detections
+DisplayName: "Panther Universal Detections"
 Description: This pack groups the standard rules that leverage unified data models
 PackDefinition:
   IDs:
@@ -12,6 +12,7 @@ PackDefinition:
     - Standard.GCP.AuditLog
     - Standard.Github.Audit
     - Standard.GSuite.Reports
+    - Standard.Notion.AuditLogs
     - Standard.Okta.SystemLog
     - Standard.OneLogin.Events
     - Standard.OnePassword.ItemUsage
@@ -21,6 +22,7 @@ PackDefinition:
     # Standard Detections
     - Standard.AdminRoleAssigned
     - Standard.BruteForceByIP
+    - Standard.ImpossibleTravel.Login
     - Standard.MFADisabled
     - Standard.NewAWSAccountCreated
     - Standard.NewUserAccountCreated

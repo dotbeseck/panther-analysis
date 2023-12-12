@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: admin_assigned.py
-RuleID: Standard.AdminRoleAssigned
-DisplayName: Admin Role Assigned
+RuleID: "Standard.AdminRoleAssigned"
+DisplayName: "Admin Role Assigned"
 Enabled: true
 LogTypes:
   - Asana.Audit
@@ -163,6 +163,33 @@ Tests:
       {
         "actor": "cat",
         "action": "team.promote_maintainer",
+        "p_log_type": "GitHub.Audit",
+        "user": "bob"
+      }
+  - Name: Github - Admin Added
+    ExpectedResult: true
+    Log:
+      {
+        "actor": "cat",
+        "action": "business.add_admin",
+        "p_log_type": "GitHub.Audit",
+        "user": "bob"
+      }
+  - Name: Github - Admin Invited
+    ExpectedResult: true
+    Log:
+      {
+        "actor": "cat",
+        "action": "business.invite_admin",
+        "p_log_type": "GitHub.Audit",
+        "user": "bob"
+      }
+  - Name: Github - Unknown Admin Role
+    ExpectedResult: false
+    Log:
+      {
+        "actor": "cat",
+        "action": "unknown.admin_role",
         "p_log_type": "GitHub.Audit",
         "user": "bob"
       }
