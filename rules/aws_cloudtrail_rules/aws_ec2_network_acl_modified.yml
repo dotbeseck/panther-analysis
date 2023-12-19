@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_ec2_network_acl_modified.py
-RuleID: AWS.EC2.NetworkACLModified
-DisplayName: EC2 Network ACL Modified
+RuleID: "AWS.EC2.NetworkACLModified"
+DisplayName: "EC2 Network ACL Modified"
 Enabled: true
 LogTypes:
   - AWS.CloudTrail
@@ -17,7 +17,7 @@ Reports:
 Severity: Info
 Description: An EC2 Network ACL was modified.
 Runbook: https://docs.runpanther.io/alert-runbooks/built-in-rules/aws-ec2-network-acl-modified
-Reference: reference.link
+Reference: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-tasks
 SummaryAttributes:
   - eventName
   - userAgent

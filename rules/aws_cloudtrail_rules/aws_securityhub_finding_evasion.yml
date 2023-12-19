@@ -1,11 +1,12 @@
 AnalysisType: rule
 Description: Detections modification of findings in SecurityHub
-DisplayName: AWS SecurityHub Finding Evasion
+DisplayName: "AWS SecurityHub Finding Evasion"
 Enabled: true
 Filename: aws_securityhub_finding_evasion.py
 Reports:
     MITRE ATT&CK:
         - TA0005:T1562
+Reference: https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-insights-view-take-action.html
 Severity: High
 Tests:
     - ExpectedResult: false
@@ -95,5 +96,5 @@ Tests:
 DedupPeriodMinutes: 60
 LogTypes:
     - AWS.CloudTrail
-RuleID: AWS.SecurityHub.Finding.Evasion
+RuleID: "AWS.SecurityHub.Finding.Evasion"
 Threshold: 1

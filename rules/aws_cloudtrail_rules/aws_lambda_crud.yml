@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_lambda_crud.py
-RuleID: AWS.LAMBDA.CRUD
-DisplayName: Lambda CRUD Actions
+RuleID: "AWS.LAMBDA.CRUD"
+DisplayName: "Lambda CRUD Actions"
 Enabled: false
 LogTypes:
   - AWS.CloudTrail
@@ -16,11 +16,11 @@ Reports:
 Severity: High
 Description: Unauthorized lambda Create, Read, Update, or Delete event occurred.
 Runbook: https://docs.aws.amazon.com/lambda/latest/dg/logging-using-cloudtrail.html
-Reference: reference.link
+Reference: https://docs.aws.amazon.com/lambda/latest/dg/logging-using-cloudtrail.html
 SummaryAttributes:
   - eventSource
   - eventName
-  - accountId
+  - recipientAccountId
   - awsRegion
   - p_any_aws_arns
 Tests:

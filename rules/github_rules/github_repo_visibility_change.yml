@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: github_repo_visibility_change.py
-RuleID: Github.Repo.VisibilityChange
-DisplayName: GitHub Repository Visibility Change
+RuleID: "Github.Repo.VisibilityChange"
+DisplayName: "GitHub Repository Visibility Change"
 Enabled: true
 LogTypes:
   - GitHub.Audit
@@ -11,6 +11,7 @@ Tags:
 Reports:
   MITRE ATT&CK:
     - TA0010:T1567
+Reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility
 Severity: High
 Description: Detects when an organization repository visibility changes.
 Tests:

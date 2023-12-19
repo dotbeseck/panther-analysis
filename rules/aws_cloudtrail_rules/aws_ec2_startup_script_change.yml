@@ -1,11 +1,12 @@
 AnalysisType: rule
 Description: Detects changes to the EC2 instance startup script. The shell script will be executed as root/SYSTEM every time the specific instances are booted up.
-DisplayName: AWS EC2 Startup Script Change
+DisplayName: "AWS EC2 Startup Script Change"
 Enabled: true
 Filename: aws_ec2_startup_script_change.py
 Reports:
     MITRE ATT&CK:
         - TA0002:T1059
+Reference: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html#user-data-shell-scripts
 Severity: High
 Tests:
     - ExpectedResult: false
@@ -92,5 +93,5 @@ Tests:
 DedupPeriodMinutes: 60
 LogTypes:
     - AWS.CloudTrail
-RuleID: AWS.EC2.Startup.Script.Change
+RuleID: "AWS.EC2.Startup.Script.Change"
 Threshold: 1

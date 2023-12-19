@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: osquery_mac_enable_auto_update.py
-RuleID: Osquery.Mac.AutoUpdateEnabled
-DisplayName: OSQuery Reports Application Firewall Disabled
+RuleID: "Osquery.Mac.AutoUpdateEnabled"
+DisplayName: "OSQuery Reports Application Firewall Disabled"
 Enabled: true
 LogTypes:
   - Osquery.Differential
@@ -21,6 +21,7 @@ Description: >
   Verifies that MacOS has automatic software updates enabled.
 Runbook: >
   Enable the auto updates on the host.
+Reference: https://support.apple.com/en-gb/guide/mac-help/mchlpx1065/mac
 SummaryAttributes:
   - name
   - action

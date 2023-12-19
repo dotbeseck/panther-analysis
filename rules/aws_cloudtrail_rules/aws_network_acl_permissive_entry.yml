@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_network_acl_permissive_entry.py
-RuleID: AWS.CloudTrail.NetworkACLPermissiveEntry
-DisplayName: AWS Network ACL Overly Permissive Entry Created
+RuleID: "AWS.CloudTrail.NetworkACLPermissiveEntry"
+DisplayName: "AWS Network ACL Overly Permissive Entry Created"
 Enabled: true
 LogTypes:
   - AWS.CloudTrail
@@ -16,7 +16,7 @@ Description: >
   A Network ACL entry that allows access from anywhere was added.
 Runbook: >
   Remove the overly permissive Network ACL entry and add a new entry with more restrictive permissions.
-Reference: reference.link
+Reference: https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-rules
 SummaryAttributes:
   - userAgent
   - sourceIpAddress

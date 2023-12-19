@@ -1,12 +1,17 @@
 AnalysisType: rule
 Filename: slack_passthrough_anomaly.py
-RuleID: Slack.AuditLogs.PassthroughAnomaly
-DisplayName: Slack Anomaly Detected
+RuleID: "Slack.AuditLogs.PassthroughAnomaly"
+DisplayName: "Slack Anomaly Detected"
 Enabled: true
 LogTypes:
   - Slack.AuditLogs
 Tags:
   - Slack
+  - Command and Control
+  - Application Layer Protocol
+Reports:
+  MITRE ATT&CK:
+    - TA0011:T1071
 Severity: Critical
 Description: Passthrough for anomalies detected by Slack
 Reference: https://api.slack.com/admins/audit-logs

@@ -1,12 +1,18 @@
 AnalysisType: rule
 Filename: slack_user_privilege_escalation.py
-RuleID: Slack.AuditLogs.UserPrivilegeEscalation
-DisplayName: Slack User Privilege Escalation
+RuleID: "Slack.AuditLogs.UserPrivilegeEscalation"
+DisplayName: "Slack User Privilege Escalation"
 Enabled: true
 LogTypes:
   - Slack.AuditLogs
 Tags:
   - Slack
+  - Privilege Escalation
+  - Account Manipulation
+  - Additional Cloud Roles
+Reports:
+  MITRE ATT&CK:
+    - TA0004:T1098.003
 Severity: High
 Description: Detects when a Slack user gains escalated privileges
 Reference: https://api.slack.com/admins/audit-logs

@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: source_ip_multiple_403.py
-RuleID: Amazon.EKS.Audit.Multiple403
-DisplayName: EKS Audit Log based single sourceIP is generating multiple 403s
+RuleID: "Amazon.EKS.Audit.Multiple403"
+DisplayName: "EKS Audit Log based single sourceIP is generating multiple 403s"
 Enabled: true
 LogTypes:
   - Amazon.EKS.Audit
@@ -10,6 +10,7 @@ Tags:
 Reports:
   MITRE ATT&CK:
     - 'TA0007:T1613'
+Reference: https://aws.github.io/aws-eks-best-practices/security/docs/detective/
 Severity: Info
 Description: > # (Optional)
   This detection identifies if a public sourceIP is generating multiple 403s

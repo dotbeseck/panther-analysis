@@ -1,12 +1,13 @@
 AnalysisType: rule
 Filename: github_repo_created.py
-RuleID: Github.Repo.Created
-DisplayName: GitHub Repository Created
+RuleID: "Github.Repo.Created"
+DisplayName: "GitHub Repository Created"
 Enabled: true
 LogTypes:
   - GitHub.Audit
 Tags:
   - GitHub
+Reference: https://docs.github.com/en/get-started/quickstart/create-a-repo
 Severity: Info
 Description: Detects when a repository is created.
 Tests:

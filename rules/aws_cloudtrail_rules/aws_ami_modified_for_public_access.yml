@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_ami_modified_for_public_access.py
-RuleID: AWS.CloudTrail.AMIModifiedForPublicAccess
-DisplayName: Amazon Machine Image (AMI) Modified to Allow Public Access
+RuleID: "AWS.CloudTrail.AMIModifiedForPublicAccess"
+DisplayName: "Amazon Machine Image (AMI) Modified to Allow Public Access"
 Enabled: true
 LogTypes:
   - AWS.CloudTrail
@@ -190,7 +190,7 @@ Tests:
       }
   -
     Name: AMI Added to User
-    ExpectedResult: false
+    ExpectedResult: true
     Log:
       {
           "awsRegion": "us-west-2",

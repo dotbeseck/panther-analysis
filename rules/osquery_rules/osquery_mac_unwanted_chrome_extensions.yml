@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: osquery_mac_unwanted_chrome_extensions.py
-RuleID: Osquery.Mac.UnwantedChromeExtensions
-DisplayName: OSQuery Detected Unwanted Chrome Extensions
+RuleID: "Osquery.Mac.UnwantedChromeExtensions"
+DisplayName: "OSQuery Detected Unwanted Chrome Extensions"
 Enabled: true
 LogTypes:
   - Osquery.Differential
@@ -17,6 +17,7 @@ Severity: Medium
 Description: >
   Monitor for chrome extensions that could lead to a credential compromise.
 Runbook: Uninstall the unwanted extension
+Reference: https://securelist.com/threat-in-your-browser-extensions/107181/
 SummaryAttributes:
   - action
   - hostIdentifier

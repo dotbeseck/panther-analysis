@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: github_advanced_security_change.py
-RuleID: GitHub.Advanced.Security.Change
-DisplayName: GitHub Security Change, includes GitHub Advanced Security
+RuleID: "GitHub.Advanced.Security.Change"
+DisplayName: "GitHub Security Change, includes GitHub Advanced Security"
 Enabled: true
 LogTypes:
   - GitHub.Audit
@@ -13,6 +13,7 @@ Reports:
 Severity: Low
 Description: The rule alerts when GitHub Security tools (Dependabot, Secret Scanner, etc) are disabled.
 Runbook: Confirm with GitHub administrators and re-enable the tools as applicable. 
+Reference: https://docs.github.com/en/code-security/getting-started/auditing-security-alerts
 Tests:
   -
     Name: Secret Scanning Disabled on a Repo

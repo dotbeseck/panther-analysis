@@ -6,8 +6,8 @@
 
 AnalysisType: rule
 Filename: new_user_account_logging.py
-RuleID: Standard.NewUserAccountCreated
-DisplayName: New User Account Created
+RuleID: "Standard.NewUserAccountCreated"
+DisplayName: "New User Account Created"
 Enabled: true
 LogTypes:
   - OneLogin.Events
@@ -24,6 +24,7 @@ Reports:
     - TA0003:T1136
 Description: A new account was created
 Runbook: A new user account was created, ensure it was created through standard practice and is for a valid purpose.
+Reference: https://attack.mitre.org/techniques/T1136/001/
 SummaryAttributes:
   - p_any_usernames
 Tests:

@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: cloudflare_firewall_ddos.py
-RuleID: Cloudflare.Firewall.L7DDoS
-DisplayName: Cloudflare L7 DDoS
+RuleID: "Cloudflare.Firewall.L7DDoS"
+DisplayName: "Cloudflare L7 DDoS"
 Enabled: true
 LogTypes:
   - Cloudflare.Firewall
@@ -11,6 +11,7 @@ Tags:
 Severity: Medium
 Description: Layer 7 Distributed Denial of Service (DDoS) detected
 Runbook: Inspect and monitor internet-facing services for potential outages
+Reference: https://www.cloudflare.com/en-gb/learning/ddos/application-layer-ddos-attack/
 DedupPeriodMinutes: 60 # 1 hour
 Threshold:  100
 SummaryAttributes:

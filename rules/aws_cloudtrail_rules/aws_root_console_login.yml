@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_root_console_login.py
-RuleID: AWS.CloudTrail.RootConsoleLogin
-DisplayName: --DEPRECATED-- Root Account Console Login
+RuleID: "AWS.CloudTrail.RootConsoleLogin"
+DisplayName: "--DEPRECATED-- Root Account Console Login"
 Enabled: false
 LogTypes:
   - AWS.CloudTrail
@@ -16,7 +16,7 @@ Reports:
 Description: Deprecated. Please see AWS.Console.RootLogin instead.
 Runbook: >
   Verify that the root login was authorized. If not, investigate the root activity and ensure no malicious activity was performed. Change the root password.
-Reference: reference.link
+Reference: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html
 SummaryAttributes:
   - eventSource
   - userAgent

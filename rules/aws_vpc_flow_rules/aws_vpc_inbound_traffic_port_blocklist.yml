@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_vpc_inbound_traffic_port_blocklist.py
-RuleID: AWS.VPC.InboundPortBlacklist
-DisplayName: VPC Flow Logs Inbound Port Blocklist
+RuleID: "AWS.VPC.InboundPortBlacklist"
+DisplayName: "VPC Flow Logs Inbound Port Blocklist"
 Enabled: false
 LogTypes:
   - AWS.VPCFlow
@@ -13,6 +13,7 @@ Tags:
 Reports:
   MITRE ATT&CK:
     - TA0011:T1571
+Reference: https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html
 Severity: High
 Description: >
   VPC Flow Logs observed inbound traffic violating the port blocklist.

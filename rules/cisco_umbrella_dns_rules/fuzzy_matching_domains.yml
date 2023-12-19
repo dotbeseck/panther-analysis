@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: fuzzy_matching_domains.py
-RuleID: CiscoUmbrella.DNS.FuzzyMatching
-DisplayName: Cisco Umbrella Domain Name Fuzzy Matching
+RuleID: "CiscoUmbrella.DNS.FuzzyMatching"
+DisplayName: "Cisco Umbrella Domain Name Fuzzy Matching"
 Enabled: false
 DedupPeriodMinutes: 15
 LogTypes:
@@ -9,6 +9,7 @@ LogTypes:
 Tags:
   - Configuration Required
   - DNS
+Reference: https://umbrella.cisco.com/blog/abcs-of-dns
 Severity: Medium
 Description: Identify lookups to suspicious domains that could indicate a phishing attack.
 Runbook: >

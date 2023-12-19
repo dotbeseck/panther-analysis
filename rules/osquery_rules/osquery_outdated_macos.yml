@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: osquery_outdated_macos.py
-RuleID: Osquery.UnsupportedMacOS
-DisplayName: Unsupported macOS version
+RuleID: "Osquery.UnsupportedMacOS"
+DisplayName: "Unsupported macOS version"
 Enabled: true
 LogTypes:
   - Osquery.Differential
@@ -12,6 +12,7 @@ Severity: Low
 Description: >
   Check that all laptops on the corporate environment are on a version of MacOS supported by IT.
 Runbook: Update the MacOs version
+Reference: https://support.apple.com/en-eg/HT201260
 SummaryAttributes:
   - name
   - hostIdentifier

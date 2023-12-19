@@ -1,7 +1,7 @@
 AnalysisType: policy
 Filename: aws_only_dmz_security_groups_publicly_accessible.py
-PolicyID: AWS.SecurityGroup.OnlyDMZPubliclyAccessible
-DisplayName: AWS Security Group - Only DMZ Publicly Accessible
+PolicyID: "AWS.SecurityGroup.OnlyDMZPubliclyAccessible"
+DisplayName: "AWS Security Group - Only DMZ Publicly Accessible"
 Enabled: true
 ResourceTypes:
   - AWS.EC2.SecurityGroup
@@ -25,6 +25,9 @@ Tests:
   -
     Name: DMZ Security Group Does Allows Public Access
     ExpectedResult: true
+    Mocks:
+      - objectName: DMZ_TAGS
+        returnValue: '[["environment", "dmz"]]'
     Resource:
       {
         "Description": "example VPC security group",
@@ -88,6 +91,9 @@ Tests:
   -
     Name: Non DMZ Security Group Allows Public Access
     ExpectedResult: false
+    Mocks:
+      - objectName: DMZ_TAGS
+        returnValue: '[["environment", "dmz"]]'
     Resource:
       {
         "Description": "example VPC security group",
@@ -151,6 +157,9 @@ Tests:
   -
     Name: Non DMZ Security Group Does Not Allow Public Access
     ExpectedResult: true
+    Mocks:
+      - objectName: DMZ_TAGS
+        returnValue: '[["environment", "dmz"]]'
     Resource:
       {
         "Description": "example VPC security group",

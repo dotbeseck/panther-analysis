@@ -9,6 +9,10 @@ PackDefinition:
     - ipinfo_location_datalake
     - ipinfo_asn_datalake
     - ipinfo_privacy_datalake
-    - panther_ipinfo_helpers
     - panther_base_helpers
-DisplayName: IPInfo
+    - panther_ipinfo_helpers
+    - panther_lookuptable_helpers
+    - panther_config
+    - panther_config_defaults
+    - panther_config_overrides
+DisplayName: "IPInfo"

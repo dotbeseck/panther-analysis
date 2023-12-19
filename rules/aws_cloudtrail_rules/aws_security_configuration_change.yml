@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_security_configuration_change.py
-RuleID: AWS.CloudTrail.SecurityConfigurationChange
-DisplayName: Account Security Configuration Changed
+RuleID: "AWS.CloudTrail.SecurityConfigurationChange"
+DisplayName: "Account Security Configuration Changed"
 Enabled: true
 LogTypes:
   - AWS.CloudTrail
@@ -15,7 +15,7 @@ Reports:
 Description: An account wide security configuration was changed.
 Runbook: >
   Verify that this change was planned. If not, revert the change and update the access control policies to ensure this doesn't happen again.
-Reference: reference.link
+Reference: https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-startup-security-baseline/controls-acct.html
 SummaryAttributes:
   - eventName
   - userAgent

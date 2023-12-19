@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: aws_ec2_route_table_modified.py
-RuleID: AWS.EC2.RouteTableModified
-DisplayName: EC2 Route Table Modified
+RuleID: "AWS.EC2.RouteTableModified"
+DisplayName: "EC2 Route Table Modified"
 Enabled: true
 LogTypes:
   - AWS.CloudTrail
@@ -16,7 +16,7 @@ Reports:
 Severity: Info
 Description: An EC2 Route Table was modified.
 Runbook: https://docs.runpanther.io/alert-runbooks/built-in-rules/aws-ec2-route-table-modified
-Reference: reference.link
+Reference: https://docs.aws.amazon.com/vpc/latest/userguide/WorkWithRouteTables.html
 SummaryAttributes:
   - eventName
   - userAgent

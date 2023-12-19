@@ -1,7 +1,7 @@
 AnalysisType: rule
 Filename: suspicious_domains.py
-RuleID: CiscoUmbrella.DNS.Suspicious
-DisplayName: Cisco Umbrella Suspicious Domains
+RuleID: "CiscoUmbrella.DNS.Suspicious"
+DisplayName: "Cisco Umbrella Suspicious Domains"
 Enabled: false
 DedupPeriodMinutes: 480 # 8 hours
 LogTypes:
@@ -9,6 +9,7 @@ LogTypes:
 Tags:
   - DNS
   - Configuration Required
+Reference: https://umbrella.cisco.com/blog/abcs-of-dns
 Severity: Low
 Description: Monitor suspicious or known malicious domains
 Runbook: Inspect the domain and check the host for other indicators of compromise

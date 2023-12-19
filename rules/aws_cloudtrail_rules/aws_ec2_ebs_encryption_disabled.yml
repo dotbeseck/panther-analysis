@@ -1,6 +1,6 @@
 AnalysisType: rule
 Description: 'Identifies disabling of default EBS encryption. Disabling default encryption does not change the encryption status of existing volumes. '
-DisplayName: AWS EC2 EBS Encryption Disabled
+DisplayName: "AWS EC2 EBS Encryption Disabled"
 Enabled: true
 Filename: aws_ec2_ebs_encryption_disabled.py
 Reports:
@@ -8,6 +8,7 @@ Reports:
         - TA0040:T1486
         - TA0040:T1565
 Runbook: Verify this action was intended and if any EBS volumes were created after the change.
+Reference: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default
 Severity: Medium
 Tests:
     - ExpectedResult: true
@@ -33,5 +34,5 @@ Tests:
 DedupPeriodMinutes: 60
 LogTypes:
     - AWS.CloudTrail
-RuleID: AWS.EC2.EBS.Encryption.Disabled
+RuleID: "AWS.EC2.EBS.Encryption.Disabled"
 Threshold: 1
